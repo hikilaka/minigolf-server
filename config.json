@@ -1,0 +1,7 @@
+{
+    "version": 35,
+    "supportedLocales": ["en_US"],
+    "baseGuestName": "jamal",
+    "chatFilter": true,
+    "disableGuestChat": false
+}
