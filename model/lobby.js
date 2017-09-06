@@ -30,6 +30,7 @@ class Lobby {
         this.players.add(player);
         this.players.forEach(p =>
             p.session.send.lobbyJoin(player, returnedFromGame));
+        // TODO send player pendingGames
     }
     remove(player, reason) {
         this.players.delete(player);
@@ -48,6 +49,14 @@ class Lobby {
         let game = this.pendingGames[gameIndex];
         game.add(player);
         // TODO: if game full, move to activeGames
+    }
+    getPlayer(name) {
+        for (let player of this.players) {
+            if (player.name === name) {
+                return player;
+            }
+        }
+        return null;
     }
     get size() {
         return this.players.size;

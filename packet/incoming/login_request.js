@@ -19,6 +19,7 @@ function handleLoginRequest(session, request) {
         // TODO: verify credentials
         session.loginType = 'registered';
         session.player = new Player(session, request.username);
+        session.player.rank = Player.Rank.ADMIN;
     }
 
     console.log(`${session.player.name} has logged in`);

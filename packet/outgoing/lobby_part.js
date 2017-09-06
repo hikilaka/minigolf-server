@@ -17,7 +17,7 @@ module.exports.name = 'lobbyPart';
 
 module.exports.send = function(session) {
     return (player, reason) => {
-        let args = ['part', player.toString(), reasonToInt(reason)];
+        let args = ['lobby', 'part', player.name, reasonToInt(reason)];
         session.protocol.writeData(args.join('\t'));
     }
 };

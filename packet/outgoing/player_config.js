@@ -8,7 +8,7 @@ module.exports.name = 'playerConfig';
 
 module.exports.send = function(session) {
     return () => {
-        let args = ['f', session.player.privilge,
+        let args = ['t', session.player.rank,
                     boolToStr(config.chatFilter),
                     boolToStr(config.disableGuestChat)];
 
